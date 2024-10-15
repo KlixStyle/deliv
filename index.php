@@ -46,11 +46,11 @@ if (isset($_GET["value"])) {
                 <?php
                 if ($choice == 1) {
                     echo '<li class="grow"><a href="index.php"><kbd>Main Site</kbd></a></li>';
-                    echo '<li class="grow"><a href="index.php?value=2"><kbd>Orders</kbd></a></li>';
+                    echo '<li class="grow"><a href="index.php?value=2"><kbd>Manage Orders</kbd></a></li>';
                 }
                 if ($choice == 0) {
                     echo '<li class="grow"><a href="index.php?value=1"><kbd>Manage Products</kbd></a></li>';
-                    echo '<li class="grow"><a href="index.php?value=2"><kbd>Orders</kbd></a></li>';
+                    echo '<li class="grow"><a href="index.php?value=2"><kbd>Manage Orders</kbd></a></li>';
                 }
                 if ($choice == 2) {
                     echo '<li class="grow"><a href="index.php"><kbd>Main Site</kbd></a></li>';
@@ -64,15 +64,16 @@ if (isset($_GET["value"])) {
         <?php
         switch ($choice) {
             case 0:
-                include "search/search.php";
+                include "search/products.php";
+                include "search/orders.php";
                 break 1;
             case 1:
-                include "add.php";  
-                include "search/search.php";
+                include "add/products.php";  
+                include "search/products.php";
                 break 1;
             case 2:
-                include "orders.php";
-                include "search/ordersearch.php";
+                include "add/orders.php";
+                include "search/orders.php";
                 break 1;
         }
         ?>

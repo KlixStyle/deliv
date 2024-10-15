@@ -79,7 +79,7 @@ if (isset($_GET["change"])) {
       if (!isset($_GET["change"])) {
         echo 'selected';
       }
-      ?> disabled value="">Wähle Anbieter aus...
+      ?> disabled value="">Choose Product...
       </option>
       <?php foreach ($products as $product) { ?>
         <option <?php
@@ -97,7 +97,7 @@ if (isset($_GET["change"])) {
       if (!isset($_GET["change"])) {
         echo 'selected';
       }
-      ?> disabled value="">Wähle Anbieter aus...
+      ?> disabled value="">Choose Location...
       </option>
       <?php foreach ($locations as $location) { ?>
         <option <?php
